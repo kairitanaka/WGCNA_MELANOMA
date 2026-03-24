@@ -32,7 +32,7 @@ th { background: #f0f0f0; color: #222; font-weight: bold; border-bottom: 2px sol
 </style></head><body>
 <div class="header">
 <h1>LMM Composition Analysis Summary</h1>
-<p class="meta">Generated: 2026-03-24 19:28</p>
+<p class="meta">Generated: 2026-03-24 19:52</p>
 <div class="tab-bar">
 <button class="tab-btn active" onclick="showTab('overview', this)" style="font-weight:800;">Overview</button>
 <button class="tab-btn" onclick="showTab('m1', this)">Model 1</button>
@@ -792,6 +792,15 @@ function showTab(mod, btn) {
   document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
   document.getElementById("panel-" + mod).classList.add("active");
   btn.classList.add("active");
+  history.replaceState(null, "", "#" + mod);
 }
+// Open tab from URL hash on page load
+window.addEventListener("load", function() {
+  var hash = location.hash.replace("#", "");
+  if (hash && document.getElementById("panel-" + hash)) {
+    var btn = document.querySelector(".tab-btn[onclick*=\'" + hash + "\']");
+    if (btn) showTab(hash, btn);
+  }
+});
 </script>
 </body></html>
