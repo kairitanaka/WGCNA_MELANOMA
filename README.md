@@ -1,2 +1,2 @@
-# WGCNA_MELANOMA
+# WGCNA MELANOMA METHODS
 HTMLs hosted for methods
