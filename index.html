@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WGCNA Analysis - Melanoma Progression</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #fff; padding: 3rem 2rem 2.5rem; }
+  .header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .header p { font-size: 1rem; opacity: 0.85; }
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .doc-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; transition: box-shadow 0.15s; }
+  .doc-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .doc-card .icon { font-size: 2rem; flex-shrink: 0; width: 48px; text-align: center; }
+  .doc-card .info { flex: 1; }
+  .doc-card .info h3 { font-size: 1rem; margin-bottom: 0.2rem; }
+  .doc-card .info h3 a { color: #0f3460; text-decoration: none; }
+  .doc-card .info h3 a:hover { text-decoration: underline; }
+  .doc-card .info p { font-size: 0.85rem; color: #555; }
+  .section-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin: 2.5rem 0 0.8rem; padding-bottom: 0.4rem; border-bottom: 2px solid #e0e0e0; }
+  .section-label:first-of-type { margin-top: 0; }
+  .footer { text-align: center; font-size: 0.8rem; color: #999; padding: 2rem 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div style="max-width:900px; margin:0 auto;">
+    <h1>WGCNA Analysis: Melanoma Progression Cohort</h1>
+    <p>Kairi Tanaka</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-label">Methods</div>
+
+  <div class="doc-card">
+    <div class="icon">&#128196;</div>
+    <div class="info">
+      <h3><a href="WGCNA_methods_KT_v1.docx">WGCNA Methods</a></h3>
+      <p>Full methods section. Network construction, module detection, composition modeling, and classification framework.</p>
+    </div>
+  </div>
+
+  <div class="section-label">Interactive Reports</div>
+
+  <div class="doc-card">
+    <div class="icon">&#128202;</div>
+    <div class="info">
+      <h3><a href="parameter_grid_search_report.html">Parameter Grid Search Report</a></h3>
+      <p>36 parameter combinations evaluated. Module-trait correlations, pathway enrichment scoring, and final parameter selection (DS=2, MMS=30, MCH=0.15).</p>
+    </div>
+  </div>
+
+  <div class="doc-card">
+    <div class="icon">&#128300;</div>
+    <div class="info">
+      <h3><a href="module_summary.html">Module Summary</a></h3>
+      <p>Biological annotation of 19 modules. Pathway enrichment (GO BP, Hallmark, Reactome), TF enrichment (CollecTRI), hub genes, and STRING PPI networks.</p>
+    </div>
+  </div>
+
+  <div class="doc-card">
+    <div class="icon">&#127993;</div>
+    <div class="info">
+      <h3><a href="lmm_summary.html">LMM Results and Module Classification</a></h3>
+      <p>Linear mixed model results (Models 1-4), sensitivity analyses, and final module classification (transformational, progressive, composition-driven).</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  WGCNA Melanoma Progression Analysis
+</div>
+
+</body>
+</html>
