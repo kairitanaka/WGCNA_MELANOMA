@@ -32,19 +32,19 @@ th { background: #f0f0f0; color: #222; font-weight: bold; border-bottom: 2px sol
 </style></head><body>
 <div class="header">
 <h1>LMM Composition Analysis Summary</h1>
-<p class="meta">Generated: 2026-03-24 20:20</p>
+<p class="meta">Generated: 2026-03-24 20:31</p>
 <div class="tab-bar">
-<button class="tab-btn active" onclick="showTab('overview', this)" style="font-weight:800;">Overview</button>
-<button class="tab-btn" onclick="showTab('m1', this)">Model 1</button>
+<button class="tab-btn active" onclick="showTab('m1', this)">Model 1</button>
 <button class="tab-btn" onclick="showTab('m2', this)">Model 2</button>
 <button class="tab-btn" onclick="showTab('m3', this)">Model 3</button>
 <button class="tab-btn" onclick="showTab('m4', this)">Model 4</button>
 <button class="tab-btn" onclick="showTab('bioscore', this)">Biological Scoring</button>
 <button class="tab-btn" onclick="showTab('progclass', this)">Progressive Classification</button>
+<button class="tab-btn" onclick="showTab('overview', this)" style="font-weight:800;">Final Modules</button>
 </div></div>
 <div class="content">
-<div id="panel-overview" class="tab-panel active">
-<h3>Module Overview</h3>
+<div id="panel-overview" class="tab-panel">
+<h3>Final Modules</h3>
 <p><span style="background:#e8f5e9;padding:2px 8px;">Green</span> = final modules used downstream. 
 <span style="background:#fdecea;padding:2px 8px;">Light Red</span> = interpretable but excluded (with reasoning). 
 <span style="background:#f5c6cb;padding:2px 8px;">Dark Red</span> = hard to interpret.</p>
@@ -72,7 +72,7 @@ th { background: #f0f0f0; color: #222; font-weight: bold; border-bottom: 2px sol
 <tr class="row-darkred"><td><strong>tan</strong></td><td>Hard to Interpret</td><td>245</td><td><strong>3</strong></td><td>-0.306</td><td>Down</td><td></td><td></td><td></td><td style="font-size:10px;">Hard to Interpret</td></tr>
 </tbody></table>
 </div>
-<div id="panel-m1" class="tab-panel">
+<div id="panel-m1" class="tab-panel active">
 <div class="formula">Model 1: ME ~ stage + TumorNevus_pct + Immune_pct + (1|patient)
 <ul style="font-size:11px; font-weight:normal; color:#666; margin:6px 0 0 0;">
 <li><b>ME</b>: Module eigengene (logCPM-based, z-scored)</li>
