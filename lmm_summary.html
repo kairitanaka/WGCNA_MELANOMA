@@ -32,7 +32,7 @@ th { background: #f0f0f0; color: #222; font-weight: bold; border-bottom: 2px sol
 </style></head><body>
 <div class="header">
 <h1>LMM Composition Analysis Summary</h1>
-<p class="meta">Generated: 2026-03-24 20:31</p>
+<p class="meta">Generated: 2026-03-30 14:58</p>
 <div class="tab-bar">
 <button class="tab-btn active" onclick="showTab('m1', this)">Model 1</button>
 <button class="tab-btn" onclick="showTab('m2', this)">Model 2</button>
@@ -51,15 +51,15 @@ th { background: #f0f0f0; color: #222; font-weight: bold; border-bottom: 2px sol
 <table><thead><tr>
 <th>Module</th><th>Label</th><th>N Genes</th><th>Bio Score</th><th>Correlation</th><th>Direction</th><th>Expected Cell Origin</th><th>Classification</th><th>Interpretation</th><th>Reasoning</th>
 </tr></thead><tbody>
+<tr class="row-green"><td><strong>red</strong></td><td>Neural / Synaptic</td><td>822</td><td><strong>5</strong></td><td>-0.735</td><td>Down</td><td>Tumor-Intrinsic</td><td>Transformational</td><td>Tumor Intrinsic, Transformational Neural Crest Identity</td><td style="font-size:10px;">Transformational. Neural crest identity module (synapse assembly, axon development). Represents a distinct axis of progression from yellow — yellow captures melanocyte differentiation identity loss while red captures neural crest lineage program loss. Different biological programs lost at potentially different rates during progression.</td></tr>
 <tr class="row-green"><td><strong>midnightblue</strong></td><td>Myeloid / Invasion Interface</td><td>212</td><td><strong>7</strong></td><td>+0.721</td><td>Up</td><td>Immune</td><td>Transformational + Progressive</td><td>Myeloid Remodeling</td><td style="font-size:10px;">TAM and invasive interface biology. Contains FCGR1A, FCGR2A, FCGR3A, MMP1/3/11/12/13, TREM2, MSR1, IL6, CXCL8. Clear pathway enrichment for myeloid activation, EMT, collagen degradation, TNFa signaling. Transformational + Progressive.</td></tr>
 <tr class="row-green"><td><strong>grey60</strong></td><td>Cell Cycle</td><td>174</td><td><strong>7</strong></td><td>+0.710</td><td>Up</td><td>Tumor-Intrinsic</td><td>Transformational + Progressive</td><td>Tumor Intrinsic, Progressive Checkpoint Override</td><td style="font-size:10px;">Strongly enriched for cell cycle pathways (E2F targets, G2M checkpoint) despite being a small module (174 genes). Hub genes include E2F1, FOXM1, AURKA, BUB1, TERT, PRAME. Transformational + Progressive.</td></tr>
-<tr class="row-green"><td><strong>brown</strong></td><td>Cilia</td><td>1258</td><td><strong>5</strong></td><td>-0.639</td><td>Down</td><td>Tumor-Intrinsic</td><td>Transformational</td><td>Tumor Intrinsic, Transformational Cilia Loss</td><td style="font-size:10px;">Cilia-enriched module showing a facet of cell identity. Transformational with a clear drop between Nevus and RGP stages.</td></tr>
-<tr class="row-green"><td><strong>blue</strong></td><td>Cellular Biogenesis</td><td>1452</td><td><strong>6</strong></td><td>+0.625</td><td>Up</td><td>Tumor-Intrinsic</td><td>Transformational + Progressive</td><td>Tumor Intrinsic, Progressive Cell Biogenesis</td><td style="font-size:10px;">Enriched in cellular biogenesis pathways (ribosome biogenesis, Golgi transport, mTORC1, protein secretion). Transformational + Progressive with clear increase in biosynthesis across progression. Note: eigengene correlation with green is 0.78 but distinct biology (biosynthesis vs energy production).</td></tr>
 <tr class="row-green"><td><strong>pink</strong></td><td>Stromal / ECM</td><td>498</td><td><strong>6</strong></td><td>-0.465</td><td>Down</td><td>Stromal</td><td>Transformational</td><td>Stromal Remodeling</td><td style="font-size:10px;">Transformational. Stromal/ECM genes (FBLN5, SLIT3, SVEP1) but stage remains significant in Model 1 after controlling for stromal composition, indicating the ECM program itself changes with progression.</td></tr>
 <tr class="row-green"><td><strong>yellow</strong></td><td>Melanocyte Identity</td><td>1163</td><td><strong>5</strong></td><td>-0.439</td><td>Down</td><td>Tumor-Intrinsic</td><td>Transformational</td><td>Tumor Intrinsic, Transformational Identity Loss</td><td style="font-size:10px;">Transformational. Melanocyte identity genes including master regulators PAX3, SOX10, BNC2. TF = SOX9.</td></tr>
 <tr class="row-green"><td><strong>green</strong></td><td>OXPHOS / Mitochondria</td><td>970</td><td><strong>6</strong></td><td>+0.426</td><td>Up</td><td>Tumor-Intrinsic</td><td>Transformational</td><td>Tumor Intrinsic, Transformational Metabolic Process</td><td style="font-size:10px;">Transformational. OXPHOS, mitochondrial translation, and respiratory electron transport. Captures metabolic reprogramming during progression.</td></tr>
 <tr class="row-green"><td><strong>turquoise</strong></td><td>Adaptive Immune</td><td>1808</td><td><strong>6</strong></td><td>+0.378</td><td>Up</td><td>Immune</td><td>Immune Infiltration</td><td>Immune Response</td><td style="font-size:10px;">Compositional. Tracks immune infiltration quantity rather than per-cell transcriptional changes.</td></tr>
-<tr class="row-red"><td><strong>red</strong></td><td>Neural / Synaptic</td><td>822</td><td><strong>3</strong></td><td>-0.735</td><td>Down</td><td>Tumor-Intrinsic</td><td>Transformational</td><td></td><td style="font-size:10px;">Excluded. Same lineage axis as yellow (melanocyte identity). Red captures neural crest identity (synapse assembly, axon development) which overlaps with melanocyte differentiation.</td></tr>
+<tr class="row-red"><td><strong>brown</strong></td><td>Cilia</td><td>1258</td><td><strong>5</strong></td><td>-0.639</td><td>Down</td><td>Tumor-Intrinsic</td><td>Transformational</td><td></td><td style="font-size:10px;">Excluded. Cilia-enriched module showing a facet of cell identity, but overlaps with yellow and red on the lineage/identity axis.</td></tr>
+<tr class="row-red"><td><strong>blue</strong></td><td>Cellular Biogenesis</td><td>1452</td><td><strong>6</strong></td><td>+0.625</td><td>Up</td><td>Tumor-Intrinsic</td><td>Transformational + Progressive</td><td></td><td style="font-size:10px;">Excluded. Enriched in cellular biogenesis pathways (ribosome biogenesis, Golgi transport, mTORC1, protein secretion). Eigengene correlation with green is 0.78 — redundant on the biosynthesis/metabolism axis.</td></tr>
 <tr class="row-red"><td><strong>black</strong></td><td>Cytoplasmic Ribosomes</td><td>574</td><td><strong>7</strong></td><td>-0.519</td><td>Down</td><td>Tumor-Intrinsic</td><td>Transformational</td><td></td><td style="font-size:10px;">Excluded. Cytoplasmic ribosomal proteins (RPL/RPS genes). Redundant with green on the metabolic axis — both capture aspects of cellular metabolism, though black represents translation machinery while green represents energy production.</td></tr>
 <tr class="row-red"><td><strong>lightgreen</strong></td><td>Vascular / Endothelial</td><td>168</td><td><strong>5</strong></td><td>+0.223</td><td>Up</td><td>Endothelial</td><td>Compositional</td><td></td><td style="font-size:10px;">Excluded. Tracks stromal and vascular cell proportion with no stage significance. Not informative for tumor progression.</td></tr>
 <tr class="row-darkred"><td><strong>salmon</strong></td><td>Hard to Interpret</td><td>238</td><td><strong>2</strong></td><td>-0.696</td><td>Down</td><td></td><td></td><td></td><td style="font-size:10px;">Hard to Interpret</td></tr>
@@ -658,9 +658,9 @@ th { background: #f0f0f0; color: #222; font-weight: bold; border-bottom: 2px sol
 </ul></div>
 <h3>Eigengene → QuPath Association (β, raw p, and FDR)</h3>
 <table><thead><tr><th>Module</th><th>Label</th>
-<th class="col-a">&beta; Immune</th><th class="col-a">p Immune</th><th class="col-a">FDR Immune</th>
-<th class="col-b">&beta; Stroma</th><th class="col-b">p Stroma</th><th class="col-b">FDR Stroma</th>
-<th class="col-c">&beta; TumorNevus</th><th class="col-c">p TumorNevus</th><th class="col-c">FDR TumorNevus</th>
+<th class="col-a">&beta;<sub>ME</sub> (Immune_pct model)</th><th class="col-a">p (Immune_pct model)</th><th class="col-a">FDR (Immune_pct model)</th>
+<th class="col-b">&beta;<sub>ME</sub> (Stroma_pct model)</th><th class="col-b">p (Stroma_pct model)</th><th class="col-b">FDR (Stroma_pct model)</th>
+<th class="col-c">&beta;<sub>ME</sub> (TumorNevus_pct model)</th><th class="col-c">p (TumorNevus_pct model)</th><th class="col-c">FDR (TumorNevus_pct model)</th>
 </tr></thead><tbody>
 <tr><td><strong>turquoise</strong></td><td>Adaptive Immune</td>
 <td class="col-a sig">0.610</td><td class="col-a sig">1.24e-08</td><td class="col-a sig">2.37e-07</td>
@@ -773,10 +773,10 @@ th { background: #f0f0f0; color: #222; font-weight: bold; border-bottom: 2px sol
 <tr><td><strong>turquoise</strong></td><td>Adaptive Immune</td><td>1808</td><td>3</td><td>1</td><td>1</td><td>1</td><td>0</td><td class="sig"><strong>6</strong></td></tr>
 <tr><td><strong>brown</strong></td><td>Cilia</td><td>1258</td><td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td class="sig"><strong>5</strong></td></tr>
 <tr><td><strong>lightgreen</strong></td><td>Vascular / Endothelial</td><td>168</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td class="sig"><strong>5</strong></td></tr>
+<tr><td><strong>red</strong></td><td>Neural / Synaptic</td><td>822</td><td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td class="sig"><strong>5</strong></td></tr>
 <tr><td><strong>yellow</strong></td><td>Melanocyte Identity</td><td>1163</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="sig"><strong>5</strong></td></tr>
 <tr><td><strong>greenyellow</strong></td><td>Hard to Interpret</td><td>280</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td class=""><strong>3</strong></td></tr>
 <tr><td><strong>magenta</strong></td><td>Hard to Interpret</td><td>311</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td class=""><strong>3</strong></td></tr>
-<tr><td><strong>red</strong></td><td>Neural / Synaptic</td><td>822</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td class=""><strong>3</strong></td></tr>
 <tr><td><strong>tan</strong></td><td>Hard to Interpret</td><td>245</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td class=""><strong>3</strong></td></tr>
 <tr><td><strong>lightcyan</strong></td><td>Hard to Interpret</td><td>208</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td class="nonsig"><strong>2</strong></td></tr>
 <tr><td><strong>lightyellow</strong></td><td>Hard to Interpret</td><td>157</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td class="nonsig"><strong>2</strong></td></tr>
